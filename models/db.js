@@ -5,7 +5,7 @@ var Sequelize = require('sequelize');
 exports.sequelize = function () {
     return new Sequelize(
         'szutic_site', // database
-        'root', // username
+        'szutic', // username
         'szutic', // password
         {
             host: 'www.szutic.club', // 数据库地址
