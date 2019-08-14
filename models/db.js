@@ -1,20 +1,21 @@
 'use strict';
 
-var Sequelize = require('sequelize');
+const Sequelize = require('sequelize');
+const config = require('../config');
 
 exports.sequelize = function () {
     return new Sequelize(
-        'szutic_site', // database
-        'szutic', // username
-        'szutic', // password
+        config.db.database,
+        config.db.username,
+        config.db.password,
         {
-            host: 'www.szutic.club', // 数据库地址
-            port: 3306, // 端口号
+            host: config.db.host, // 数据库地址
+            port: config.db.port, // 端口号
             logging: console.log,
             timezone: '+08:00',
             dialect: "mysql",
             dialectOptions: {
-                charset: "utf8mb4",
+                charset: "utf8mb4", // 支持中文
                 supportBigNumbers: true,
                 bigNumberStrings: true
             }
