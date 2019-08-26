@@ -68,7 +68,12 @@ module.exports = function (sequelize, DataTypes) {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
 			field: 'second_depart'
-		}
+        },
+        otherClubs: {
+            type: DataTypes.STRING(40),
+            allowNull: true,
+            field: 'other_clubs'
+        }
 	}, {
 		tableName: 'applicant'
 	});
